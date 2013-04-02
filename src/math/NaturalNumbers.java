@@ -4,11 +4,12 @@ import static datastructures2.ListModule.*;
 
 public class NaturalNumbers {
   public static final int ZERO = 0;
+  private static final List<Integer> EMPTYLI = emptyList();
 
   public static int next(int previous) { return previous + 1; }
 
   public static List<Integer> take(int count) {
-    return doTake(emptyList(), count);
+    return doTake(EMPTYLI, count);
   }
 
   private static List<Integer> doTake(List<Integer> accumulator, int count) {
